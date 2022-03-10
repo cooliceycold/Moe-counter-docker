@@ -1,81 +1,50 @@
 # Moe-counter
 
-多种风格可选的萌萌计数器
+多种风格可选的萌萌计数器,源项目地址[journey-ad/Moe-counter](https://github.com/journey-ad/Moe-counter),本项目进行了Docker化，技术不佳，请见谅。
 
-![Moe-counter](https://count.getloli.com/get/@Moe-counter.github)
+![Moe-counter](https://count.koalarong.com/get/@Moe-counter.github)
 
 <details>
 <summary>More theme</summary>
 
 ##### asoul
-![asoul](https://count.getloli.com/get/@demo?theme=asoul)
+![asoul](https://count.koalarong.com/get/@demo?theme=asoul)
 
 ##### moebooru
-![moebooru](https://count.getloli.com/get/@demo?theme=moebooru)
+![moebooru](https://count.koalarong.com/get/@demo?theme=moebooru)
 
 ##### rule34
-![Rule34](https://count.getloli.com/get/@demo?theme=rule34)
+![Rule34](https://count.koalarong.com/get/@demo?theme=rule34)
 
 ##### gelbooru
-![Gelbooru](https://count.getloli.com/get/@demo?theme=gelbooru)</details>
+![Gelbooru](https://count.koalarong.com/get/@demo?theme=gelbooru)</details>
 
 ## Demo
-[https://count.getloli.com](https://count.getloli.com)
+[https://count.koalarong.com](https://count.koalarong.com)
 
 ## Usage
 
-### Install
+### Compose示例
 
-#### Run on Repl.it
-
-- Open the url [https://repl.it/@journeyad/Moe-counter](https://repl.it/@journeyad/Moe-counter)
-- Just hit the **Fork** button
-- And hit the **Run** button
-
-#### Deploying on your own server
-
-```shell
-$ git clone https://github.com/journey-ad/Moe-counter.git
-$ cd Moe-counter
-$ yarn install
-
-$ yarn start
+```bash
+ moe-counter:
+    image: koalarong/moe-counter:latest
+    #ports:
+      #- "3000:3000"
+    restart: always
+    container_name: docker-moe-counter
+    networks:
+      - webapp
+    volumes:
+      - ../data/moe-counter/count.db:/usr/local/src/Moe-counter/count.db
+#使用sqlite请将count.db文件放置于宿主机，挂载于容器中，以防止容器重建时丢失数据
 ```
 
-### Confignation
+### Nginx反代示例
 
-`config.yml`
-
-```yaml
-app:
-  port: 3000
-
-db:
-  type: mongodb # sqlite or mongodb
+```bash
+location /get/ {
+        proxy_pass http://docker-moe-counter:3000/get/;
+        proxy_set_header Host $host:$server_port;
+  }
 ```
-
-If you use mongodb, you need to specify the environment variable `DB_URL`
-
-```shell
-# eg:
-export DB_URL=mongodb+srv://account:passwd@***.***.***.mongodb.net/db_count
-```
-
-repl.it can use `.env` file, [documentation](https://docs.repl.it/repls/secret-keys)
-
-```
-DB_URL="mongodb+srv://account:passwd@***.***.***.mongodb.net/db_count"
-```
-
-## Credits
-
-*   [repl.it](https://repl.it/)
-*   [A-SOUL](https://www.asoulworld.com/) <sup>(非官方导航站)</sup>
-*   [moebooru](https://github.com/moebooru/moebooru)
-*   rule34.xxx NSFW
-*   gelbooru.com NSFW
-*   [Icons8](https://icons8.com/icons/set/star)
-
-## License
-
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fjourney-ad%2FMoe-counter.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fjourney-ad%2FMoe-counter?ref=badge_large)

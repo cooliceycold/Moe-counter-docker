@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:lts-alpine
 
 LABEL version = "1.0" 
 LABEL author = "KoalaRong"
