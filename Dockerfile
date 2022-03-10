@@ -1,4 +1,7 @@
-FROM node:alpine
+FROM node:14-alpine
+
+LABEL version = "1.0" 
+LABEL author = "KoalaRong"
 
 ENV NPM_MIRROR="https://registry.npmmirror.com"
 
