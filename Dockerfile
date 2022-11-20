@@ -11,7 +11,7 @@ RUN set -x \
     && apk add --no-cache --virtual .build-deps \
     git \
     && yarn config set registry ${NPM_MIRROR} \
-    && git clone https://github.com/journey-ad/Moe-counter.git /usr/local/src/Moe-counter\
+    && git clone https://github.com/cooliceycold/Moe-counter-docker.git /usr/local/src/Moe-counter\
     && cd /usr/local/src/Moe-counter \
     && yarn install \
     && apk del .build-deps 
