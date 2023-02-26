@@ -13,11 +13,6 @@
 ##### moebooru
 ![moebooru](https://count.koalarong.com/get/@demo?theme=moebooru)
 
-##### rule34
-![Rule34](https://icecf.cf/get/@demo?theme=rule34)
-
-##### gelbooru
-![Gelbooru](https://icecf.cf/get/@demo?theme=gelbooru)</details>
 
 ## Demo
 [https://icecf.cf/](https://icecf.cf/)
