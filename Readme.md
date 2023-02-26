@@ -14,13 +14,13 @@
 ![moebooru](https://count.koalarong.com/get/@demo?theme=moebooru)
 
 ##### rule34
-![Rule34](https://count.koalarong.com/get/@demo?theme=rule34)
+![Rule34](https://icecf.cf/get/@demo?theme=rule34)
 
 ##### gelbooru
-![Gelbooru](https://count.koalarong.com/get/@demo?theme=gelbooru)</details>
+![Gelbooru](https://icecf.cf/get/@demo?theme=gelbooru)</details>
 
 ## Demo
-[https://count.koalarong.com](https://count.koalarong.com)
+[https://icecf.cf/](https://icecf.cf/)
 
 ## Usage
 
