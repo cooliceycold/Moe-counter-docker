@@ -19,22 +19,6 @@
 
 ## Usage
 
-### Compose示例
-
-```bash
- moe-counter:
-    image: koalarong/moe-counter:latest
-    #ports:
-      #- "3000:3000"
-    restart: always
-    container_name: docker-moe-counter
-    networks:
-      - webapp
-    volumes:
-      - ../data/moe-counter/count.db:/usr/local/src/Moe-counter/count.db
-#使用sqlite请将count.db文件放置于宿主机，挂载于容器中，以防止容器重建时丢失数据
-```
-
 ### Nginx反代示例
 
 ```bash
