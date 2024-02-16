@@ -14,9 +14,6 @@
 ![moebooru](https://count.koalarong.com/get/@demo?theme=moebooru)
 
 
-## Demo
-[https://icecf.cf/](https://icecf.cf/)
-
 ## Usage
 
 ### Nginx反代示例
