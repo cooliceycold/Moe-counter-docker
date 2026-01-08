@@ -25,7 +25,7 @@ html
       |  enter personal information
 
     details
-      summary(style='display: inline-block;', onclick='_evt_push("click", "normal", "more_theme")')
+      summary(style='display: inline-block;')
         h3(style='display: inline-block; cursor: pointer;') More theme
       p(style='margin: 0;') Just use the query parameters <code>theme</code>, like this: <code>https://mc.rslist.cf/get/@:name?theme=moebooru</code>
       h5 asoul
@@ -53,7 +53,7 @@ html
         option(value='rule34') rule34
         option(value='gelbooru') gelbooru
         option(value='gelbooru-h') gelbooru-h
-      button#get(style='margin: 10px 0;', onclick='_evt_push("click", "normal", "get_counter")') Get
+      button#get(style='margin: 10px 0;') Get
       img#result(style='display: block;')
 
       script.
